@@ -1,0 +1,134 @@
+/* Layout */
+.newsletter-section {
+  position: relative;
+  display: grid;
+  gap: 2rem;
+  grid-template-areas:
+    "hero"
+    "form";
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: clamp(3rem, 5vw, 6rem) 1rem;
+  overflow: hidden;
+}
+
+/* Desktop layout: hero left, form right */
+@media (min-width: 900px) {
+  .newsletter-section {
+    grid-template-columns: 1fr 1.2fr;
+    grid-template-areas: "hero form";
+    align-items: start;
+    column-gap: 3rem;
+    padding: clamp(3rem, 6vw, 5rem);
+  }
+}
+
+/* Hero text */
+.newsletter-hero {
+  grid-area: hero;
+  text-align: center;
+}
+
+@media (min-width: 900px) {
+  .newsletter-hero {
+    text-align: left;
+    padding-left: 1rem;
+  }
+}
+
+/* Title */
+.newsletter-title {
+    font-size: 2rem;
+    font-weight: 800;
+    letter-spacing: -0.03em;
+    margin-bottom: 0.6rem;
+}
+
+/* Subtitle */
+.newsletter-subtitle {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    line-height: 1.8;
+    max-width: 42rem;
+    margin: 0 auto;
+}
+
+/* Form container */
+.nl-input-container {
+  grid-area: form;
+  display: grid;
+  gap: 1rem 1.2rem;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  align-items: center;
+  text-align: left;
+  padding-right: 1rem;
+}
+
+@media (min-width: 900px) {
+  .nl-input-container {
+    margin-top: 0; 
+  }
+}
+
+.nl-input-container label {
+  font-weight: 600;
+  color: var(--text);
+  display: flex;
+  flex-direction: column;
+  font-size: 0.95rem;
+}
+
+.nl-input-container input, textarea {
+  margin-top: 0.35rem;
+  padding: 0.75rem 1rem;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  font-size: 0.95rem;
+  color: var(--text);
+  background: #f8fafc;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+textarea {
+    resize: vertical;
+}
+
+.nl-input-container input:focus-visible, textarea:focus-visible {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px var(--ring);
+}
+
+/* Subscribe button */
+.nl-subscribe-btn {
+  grid-column: 1 / -1;
+  justify-self: center;
+  text-decoration: none;
+  display: inline-block;
+  background: #2f2f2f;
+  color: #fff;
+  border-radius: 10px;
+  padding: 0.85rem 1.5rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  font-size: 1rem;
+  transition: background 0.2s ease, transform 0.15s ease;
+  margin-top: 0.5rem;
+}
+.nl-subscribe-btn:hover {
+  transform: translateY(-2px);
+}
+.nl-subscribe-btn:focus-visible {
+  outline: 2px solid pink;
+  outline-offset: 3px;
+}
+
+/* Small screens */
+@media (max-width: 600px) {
+  .nl-input-container {
+    grid-template-columns: 1fr;
+  }
+  .newsletter-subtitle {
+    font-size: 0.95rem;
+  }
+}

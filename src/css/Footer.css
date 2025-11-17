@@ -1,0 +1,152 @@
+/* Shell */
+.container__footer {
+  background: radial-gradient(circle at top left, #9af7d33c 0, #ffffff 45%, #d2a4f36f 100%);
+  border-top: 1px solid rgba(148, 163, 184, 0.179);
+  padding: clamp(2.5rem, 4vw, 3.5rem) 1.5rem 2.5rem;
+}
+
+.footer-hero {
+  max-width: 1120px;
+  margin: 0 auto;
+}
+
+/* Social row */
+.hero__footer {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 1.5rem;
+}
+
+.social-links {
+  display: flex;
+  gap: 0.75rem;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.social-tag a {
+  display: inline-flex;
+  width: 2.1rem;
+  height: 2.1rem;
+  border-radius: 999px;
+  align-items: center;
+  justify-content: center;
+  background: rgba(15, 23, 42, 0.95);
+  color: var(--accent-soft);
+  text-decoration: none;
+  font-size: 1rem;
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.15s ease,
+    box-shadow 0.2s ease;
+}
+
+.social-tag a:hover {
+  background: rgb(255, 255, 255);
+  border: none;
+  transform: translateY(-1px);
+}
+
+/* Main content */
+.footer-content {
+  padding: 1.75rem 1.5rem 1.4rem;
+}
+
+.main-content ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-links-title {
+  margin-bottom: 0.35rem;
+}
+
+.nav-link-title {
+  font-size: 0.95rem;
+  font-weight: 700;
+}
+
+.nav-link {
+  margin: 0.15rem 0;
+}
+
+.nav-link a {
+  font-size: 0.9rem;
+  color: #4d4d4d90;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.nav-link a:hover {
+  color: var(--accent-soft);
+}
+
+/* Divider */
+.footer-divider {
+  height: 1px;
+  width: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(148, 163, 184, 0.6),
+    transparent
+  );
+  margin: 0.5rem 0 0.85rem;
+}
+
+/* Certifications hint */
+.hint-container {
+  margin: 0.4rem 0 0.7rem;
+  color: var(--text-muted);
+  font-size: 0.82rem;
+}
+
+.hint-container small {
+  opacity: 0.9;
+}
+
+/* Bottom row */
+.add-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+.tos {
+  opacity: 0.9;
+}
+
+.rights-reserved-msg {
+  opacity: 0.7;
+}
+
+/* Focus states */
+.social-tag a:focus-visible,
+.nav-link a:focus-visible {
+  outline: 2px solid var(--ring);
+  outline-offset: 3px;
+}
+
+/* =========================
+   Responsive Tweaks
+   ========================= */
+@media (max-width: 768px) {
+  .hero__footer {
+    justify-content: center;
+    margin-bottom: 1.2rem;
+  }
+
+  .main-content {
+    grid-template-columns: 1fr;
+    gap: 1.1rem;
+  }
+
+  .footer-content {
+    padding-inline: 1.25rem;
+  }
+}

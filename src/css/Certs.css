@@ -1,0 +1,43 @@
+/* =========================
+   Certs 
+   ========================= */
+.certs-title {
+  font-size: clamp(1.6rem, 1.3rem + 1vw, 2.2rem);
+}
+
+/* Grid */
+.certs-display-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+  gap: 1.5rem;
+  place-items: center;
+}
+
+/* Logo */
+.cert-card-image-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  place-self: center;
+  height: 60%;
+  width: 60%;
+}
+
+.cert-img {
+    height: 50px;
+    width: 90px;
+    display: flex; 
+    margin: 0 auto;
+    object-fit: contain;
+    margin-bottom: 0.7rem;
+    filter: saturate(0);
+    opacity: 0.4;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .cert-card {
+    width: 100px;
+    height: 60px;
+  }
+}

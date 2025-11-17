@@ -1,0 +1,231 @@
+:root {
+  --bg-dark: #ffffff;
+  --bg-darker: #ffffff;
+  --text-light: #f9fafb;
+  --text-muted: #9ca3af;
+  --accent: #9318ff;        
+  --accent-soft: #daa4eb;
+  --accent-glow: rgba(114, 67, 157, 0.573);
+  --ring: #783ea4;
+}
+
+/* Hero */
+.hero-section {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+  background: radial-gradient(circle at top, #a9ffdea7 0, #ffffff 45%, #d2a4f36b 100%);
+  border-bottom: 1px solid black;
+  padding: clamp(4rem, 8vw, 6rem) 1.5rem clamp(4rem, 6vw, 5rem);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Content */
+.hero {
+  position: relative;
+  z-index: 1;
+  max-width: 800px;
+  text-align: center;
+}
+
+.hero-user-blurb {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-top: 1rem;
+}
+
+.user-stack {
+  display: flex;
+  align-items: center;
+}
+
+/* avatar */
+.user-img {
+  border-radius: 999px;
+  border: 4px solid #fff;
+  width: 30px;
+  height: 30px;
+  object-fit: cover;
+  filter: blur(2px);
+}
+
+/* overlap effect */
+.user-img:not(:first-child) {
+  margin-left: -12px;
+}
+
+.user-count {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--text-muted);
+}
+
+.hero-title {
+  font-size: clamp(2.1rem, 1.6rem + 2.5vw, 3rem);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  margin-bottom: 0.6rem;
+  line-height: 1.4;
+}
+.hero-title span:nth-child(1) {
+    background: rgba(77, 255, 0, 0.286);
+} .hero-title span:nth-child(3) {
+    background: rgba(0, 255, 208, 0.286);
+}
+.highlight {
+    background: rgba(255, 247, 0, 0.286);
+}
+
+.hero-subtitle {
+  color: var(--text-muted);
+  font-size: 0.98rem;
+  line-height: 1.75;
+  max-width: 45rem;
+  margin: 0 auto 1.9rem;
+}
+
+/* CTA buttons */
+.cta-container {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.9rem;
+}
+
+.get-started-btn,
+.demo-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.85rem 1.5rem;
+  border-radius: 9999px;
+  font-weight: 700;
+  font-size: 0.95rem;
+  text-decoration: none;
+  transition:
+    background 0.2s ease,
+    color 0.2s ease,
+    transform 0.15s ease,
+    box-shadow 0.2s ease,
+    border-color 0.2s ease;
+}
+
+/* Primary CTA */
+.get-started-btn::after,
+.demo-btn::after {
+  content: "→";
+  display: inline-block;
+  margin-left: 0.4rem;
+  opacity: 0;
+  transform: translateX(-4px);
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.get-started-btn:hover::after,
+.demo-btn:hover::after {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.get-started-btn:hover, .demo-btn:hover {
+    transform: rotate(3deg);
+}
+/* Secondary CTA */
+.demo-btn, .get-started-btn {
+  border: 1px solid rgba(148, 163, 184, 0.267);
+  background: rgba(255, 255, 255, 0.9);
+  color: #222222;
+}
+
+/* Focus styles */
+.get-started-btn:focus-visible,
+.demo-btn:focus-visible {
+  outline: 2px solid var(--ring);
+  outline-offset: 3px;
+}
+
+/* Statistic Cards */
+.stats__hero {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
+    gap: 20px;
+}
+
+.stat__hero{
+    display: flex; flex-direction: column;
+    list-style: none;
+    border-radius: 10px;
+    padding: .85rem;
+    margin-top: 4%;
+}
+
+.stats__hero .stat__hero:nth-child(1) {
+    position: absolute;
+    top: 0;
+    right: 80%;
+    border: 1px solid rgb(129, 230, 206);
+    background: rgba(156, 242, 222, 0.317);
+} .stats__hero .stat__hero:nth-child(2) {
+    position: absolute;
+    top: 0;
+    left: 80%;
+    border: 1px solid rgb(227, 192, 255);
+    background: rgba(227, 192, 255, 0.333);
+} .stats__hero .stat__hero:nth-child(3) {
+    position: absolute;
+    top: 50%;
+    right: 80%;
+    border: 1px solid rgb(163, 253, 168);
+    background: rgba(163, 253, 167, 0.37);
+} .stats__hero .stat__hero:nth-child(4) {
+    position: absolute;
+    top: 50%;
+    left: 80%;
+    border: 1px solid rgb(246, 159, 159);
+    background: rgba(255, 192, 192, 0.642);
+}
+
+.value__hero{
+    font-weight: 700;
+    font-size: 1.2rem;
+}
+.text__hero {
+    font-size: .68rem;
+}
+
+
+/* =========================
+   Responsive Tweaks
+   ========================= */
+   
+@media (max-width: 912px) {
+    .stats__hero {
+        display: none;
+    }
+}
+
+@media (max-width: 820px) {
+    .stats__hero {
+        display: none;
+    }
+}
+
+@media (max-width: 640px) {
+  .hero-section {
+    padding-inline: 1.25rem;
+  }
+  .hero-title {
+    font-size: clamp(1.9rem, 6vw, 2.4rem);
+  }
+  .hero-subtitle {
+    font-size: 0.9rem;
+  }
+  .stat__hero {
+    display: none;
+  }
+}
