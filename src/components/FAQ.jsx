@@ -1,17 +1,9 @@
 import "../css/FAQ.css";
 
-import { motion } from "framer-motion";
-
 function FAQ() {
   return (
     <section className="faq-section" aria-labelledby="faq-heading">
       <header className="faq-hero">
-        <motion.div
-            initial={{ opacity: 0, y: 30}}
-            whileInView={{ opacity: 1, y: 0}}
-            transition={{ duration: 0.6, ease: "easeOut"}}
-            viewport={{ once: true }}
-        >
         <h2 id="faq-heading" className="faq-title">
             Have a Question? 
         </h2>
@@ -19,7 +11,6 @@ function FAQ() {
             Find all the answers to TeliaAI's most 
             frequently asked questions.
         </p>
-        </motion.div>
       </header>
 
       <div className="accordion-container">

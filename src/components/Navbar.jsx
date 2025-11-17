@@ -9,11 +9,10 @@ function Nav() {
     return (
         <div className="container__nav">
             <nav className="navbar">
-               
+               <div className="logo">
+                    Telia<span className="accent">AI</span>
+               </div>
                 <div className="nav-links">
-                    <span className="logo">
-                        Telia<span className="accent">AI</span>
-                    </span>
                     <a href="#about">Features</a>
                     <a href="#subscriptions">Pricing</a>
                     <a href="#reviews">Testimonials</a>
@@ -37,9 +36,6 @@ function Nav() {
                     id="supple-links"
                     className={`supple-links ${menuOpen ? "is-open" : ""}`}
                 >
-                    <span className="logo">
-                        TeliaAI
-                    </span>
                     <a href="#about">Features</a>
                     <a href="#subscriptions">Pricing</a>
                     <a href="#reviews">Testimonials</a>

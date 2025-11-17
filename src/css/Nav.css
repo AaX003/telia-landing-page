@@ -7,25 +7,22 @@
   box-shadow: 0 2px 6px rgba(0,0,0,.04);
 }
 
-.container__nav > nav,
-.container__nav {
-  display: grid;
-  grid-template-columns: auto 1fr;
+.container__nav > nav {
+  display: flex;
   align-items: center;
-  max-width: 2800px;
+  max-width: 1200px;
   margin: 0 auto;
   gap: 1rem;
-  padding: 0.75rem 1rem;
+  padding: 1.5rem 1rem;
 }
 
-/* Logo */
 .logo {
-  font-size: 1.2rem;
-  font-weight: 600;
+  font-weight: 800;
+  margin-right: auto;
 }
 
 .logo .accent {
-  background: linear-gradient(90deg, rgb(42, 42, 43), rgb(43, 43, 43));
+  background: linear-gradient(rgb(72, 45, 191), rgb(228, 149, 239));
   padding: .25rem;
   border-radius: 5px;
   color: white;

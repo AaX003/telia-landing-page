@@ -1,5 +1,4 @@
 import "../css/Testimonials.css";
-import { useCallback, useState } from "react";
 
 // ICONS + IMAGES
 import { IoMdStar } from "react-icons/io";

@@ -87,12 +87,6 @@ function Integrations() {
     return (
         <section className="integrations-section">
             <section className="hero__integrations">
-                 <motion.div
-                    initial={{ opacity: 0, y: 5}}
-                    whileInView={{ opacity: 1, y: 0}}
-                    transition={{ duration: 0.6, ease: "easeOut"}}
-                    viewport={{ once: true }}
-                >
                 <header className="title__hero">
                     <h3 className="title__integrations">
                         Supported Languages & Integrations
@@ -103,8 +97,6 @@ function Integrations() {
                         responsibilities both seamless and smooth.
                     </p>
                 </header>
-            </motion.div>
-                
             </section>
             <div className="button-indicators">
                     {attr.map((a, i) => (
