@@ -24,6 +24,9 @@ function Root() {
             <section id="about">
                 <About />
             </section>
+            <section id="howto">
+                <HowTo />
+            </section>
             <section id="subscriptions">
                 <Subscriptions />
             </section>

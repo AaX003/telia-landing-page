@@ -26,7 +26,7 @@
   color: var(--text-muted);
   font-size: 1rem;
   max-width: 55ch;
-  margin: 0 auto 2.5rem;
+  margin: 0 auto;
   line-height: 1.7;
 }
 
@@ -34,32 +34,25 @@
 .steps-display {
     display: grid;
     gap: 1.75rem;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    margin-top: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 }
 
 /* Step Card */
 .step-card {
-  border: 1px solid rgba(147, 24, 255, 0.15);
+  border: 2px solid rgb(38, 38, 39);
   border-radius: 1.3rem;
   padding: 1.75rem 1.4rem;
   text-align: left;
   backdrop-filter: blur(8px);
   transition: transform 0.25s ease, border-color 0.25s ease;
-} .steps-display .step-card:nth-child(1) {
-    background: rgba(243, 59, 59, 0.186);
-} .steps-display .step-card:nth-child(2) {
-    background: rgba(59, 243, 145, 0.186);
-} .steps-display .step-card:nth-child(3) {
-    background: rgba(114, 59, 243, 0.186);
-}
+} 
 
 .step-card.not-active {
     opacity: 0.5;
     filter: saturate(0);
 }
 .step-card.is-active {
-    transform: rotate(-3deg);
+    transform: scale(1.05);
 }
 
 /* Number Badge */
@@ -95,7 +88,8 @@
 /* Responsive Tweaks */
 @media (max-width: 540px) {
     .steps-display {
-        display: flex;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     }
     .step-card {
         padding: 1.5rem;

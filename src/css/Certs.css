@@ -34,6 +34,11 @@
     opacity: 0.4;
 }
 
+.cert-img:hover {
+  opacity: 1;
+  filter: none;
+}
+
 /* Responsive */
 @media (max-width: 480px) {
   .cert-card {

@@ -12,11 +12,20 @@ function Nav() {
                <div className="logo">
                     Telia<span className="accent">AI</span>
                </div>
+
                 <div className="nav-links">
                     <a href="#about">Features</a>
                     <a href="#subscriptions">Pricing</a>
                     <a href="#reviews">Testimonials</a>
-                    <a href="#newsletter">Newsletter</a>
+                    <a href="#blog">Blog</a>
+                    <a href="#contact">Contact</a>
+
+                  
+                </div>
+
+                <div className="auth-links">
+                    <a href="/register">Sign Up</a>
+                    <a href="/login">Log In</a>
                 </div>
                 
                 <div className="menu-btn-wrapper">

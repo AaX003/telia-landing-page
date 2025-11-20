@@ -65,8 +65,7 @@
   font-weight: 700;
   position: relative;
   outline: none;
-}
-
+} 
 /* Hides default marker */
 .accordion-header::-webkit-details-marker { display: none; }
 

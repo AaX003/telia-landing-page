@@ -1,0 +1,129 @@
+/* Sign in container */
+
+.signin-section {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 2rem 1rem;
+  background: radial-gradient(circle at top, #a9ffdea7 0, #ffffff 45%, #d2a4f36b 100%);
+  font-family: "Joti One", sans-serif;
+}
+
+/* form */
+.form-container {
+  background: #ffff;
+  backdrop-filter: blur(14px);
+  padding: 2.5rem 2rem;
+  border-radius: 24px;
+  width: min(420px, 95%);
+  box-shadow: 0 14px 40px rgba(0, 0, 0, 0.08),
+              0 0 0 6px rgba(255,255,255,0.7);
+  animation: fadePop 0.6s ease forwards;
+}
+
+
+/* Fade + pop animation */
+@keyframes fadePop {
+  from {
+    opacity: 0;
+    transform: translateY(20px) scale(0.97);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+
+/* =======================
+   Header
+   ======================= */
+.form-header .header {
+  font-size: 1.9rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 1.8rem;
+  color: #1e1e1e;
+}
+
+
+/* =======================
+   Labels
+   ======================= */
+.form label {
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: #4b5563;
+  display: block;
+  margin-bottom: 0.35rem;
+}
+
+
+/* =======================
+   Inputs
+   ======================= */
+.form input {
+  width: 100%;
+  max-width: 400px;
+  padding: 0.8rem 1rem;
+  border-radius: 14px;
+  border: 2px solid #e5e7eb;
+  font-size: 0.95rem;
+  background: #fff;
+  margin-bottom: 5%;
+  transition: border-color 0.2s ease, box-shadow 0.25s ease;
+}
+
+.form input:focus-visible {
+  outline: none;
+  border-color: #313030;
+  box-shadow: 0 0 0 3px rgba(251, 113, 228, 0.59);
+}
+
+
+/* =======================
+   Link / Message
+   ======================= */
+.link-wrapper {
+  margin: 0.7rem 0 1.2rem;
+  text-align: center;
+}
+
+.msg {
+  font-size: 0.9rem;
+  color: #6b7280;
+}
+
+.link:hover {
+  text-decoration: underline;
+}
+
+
+/* =======================
+   Buttons
+   ======================= */
+.submit-btn {
+  width: 100%;
+  padding: 0.9rem 1rem;
+  background: #313030;
+  border: none;
+  border-radius: 14px;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #ffffff;
+  cursor: pointer;
+  margin-top: 0.6rem;
+  transition: transform 0.15s ease, box-shadow 0.2s ease;
+}
+
+/* Back button */
+.back-to-home-btn {
+  display: block;
+  text-align: center;
+  margin: 1rem auto 0;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: #6b7280;
+  transition: color 0.2s ease;
+}

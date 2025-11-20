@@ -3,9 +3,22 @@ import { createRoot } from 'react-dom/client'
 import './index.css'
 
 import Root from './components/Root'
+import Register from './components/Register'
+import Login from './components/Login'
+import Error from './components/Error'
+
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <Root />
-  </StrictMode>,
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" index element={<Root />}/>
+        <Route path="/register" element={<Register />}/>
+        <Route path="/login" element={<Login />}/>
+        <Route path="*" element={<Error />}/> 
+      </Routes>
+    </BrowserRouter>
+    
+  </StrictMode>
 )

@@ -1,3 +1,4 @@
+import { Link } from "react-router";
 import "../css/Hero.css";
 import Certs from "./Certs";
 
@@ -41,13 +42,7 @@ function Hero() {
                 </p>
             </header>
              <div className="cta-container">
-                <a
-                    href="#subscriptions"
-                    className="get-started-btn"
-                    aria-label="Get started with Telia"
-                >
-                    Get Started Now
-                </a>
+                <Link to="/register" className="get-started-btn">Get Started</Link>
                 <a
                     href="#!"
                     className="demo-btn"

@@ -1,0 +1,60 @@
+.error-section {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  background: radial-gradient(circle at top, #a9ffdea7 0, #ffffff 45%, #d2a4f36b 100%);
+  animation: fadeIn 0.6s ease forwards;
+  padding: 2rem;
+}
+
+/* Floaty 404 */
+.error-section h1 {
+  font-size: clamp(5rem, 12vw, 9rem);
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  margin: 0;
+  color: #111827;
+  animation: float 3.2s ease-in-out infinite;
+}
+
+/* Subtext */
+.error-section p {
+  max-width: 50ch;
+  color: #4b5563;
+  font-size: 1.1rem;
+  margin: 1rem 0 2rem;
+  line-height: 1.6;
+}
+
+/* Return button */
+.error-section a {
+  background: var(--accent);
+  color: #fff;
+  padding: 0.85rem 1.6rem;
+  border-radius: 999px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: transform 0.15s ease, box-shadow 0.2s ease;
+  box-shadow: 0 10px 25px rgba(147, 24, 255, 0.25);
+}
+
+.error-section a:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 18px 35px rgba(147, 24, 255, 0.35);
+}
+
+/* Animations */
+@keyframes float {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-12px); }
+  100% { transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}

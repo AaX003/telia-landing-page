@@ -69,7 +69,7 @@ function Contact() {
                     href="#login"
                     className="nl-subscribe-btn"
                 >
-                    Subscribe 
+                    Reach Out 
                 </a>
             </section>
         </section>
