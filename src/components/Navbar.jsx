@@ -1,3 +1,4 @@
+import { Link } from "react-router";
 import { useState } from "react";
 import { MdMenu } from "react-icons/md";
 
@@ -24,8 +25,8 @@ function Nav() {
                 </div>
 
                 <div className="auth-links">
-                    <a href="/register">Sign Up</a>
-                    <a href="/login">Log In</a>
+                    <Link to="/register">Sign Up</Link>
+                    <Link to="/login">Log In</Link>
                 </div>
                 
                 <div className="menu-btn-wrapper">

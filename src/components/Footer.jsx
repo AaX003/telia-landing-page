@@ -6,6 +6,9 @@ function Footer() {
   return (
     <footer className="container__footer" aria-label="Site footer">
       <section className="footer-hero">
+        <div className="logo">
+            Telia<span className="accent">AI</span>
+        </div>
         <div className="hero__footer">
           <ul className="social-links" aria-label="Social media">
             <li className="social-tag">

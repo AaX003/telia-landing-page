@@ -1,7 +1,7 @@
 .changelog-section {
   position: relative;
   padding: clamp(3rem, 6vw, 5rem) 1.5rem;
-  max-width: 1280px;
+  max-width: 2480px;
   margin: 0 auto;
   text-align: center;
 }
@@ -61,38 +61,89 @@
   transform: translateY(-2px);
 }
 
-/* Cards */
+.changelog-card-display {
+  margin-top: 2rem;
+  display: grid;
+  gap: 1.5rem;
+  padding-inline: 0.5rem;
+
+  /* Responsive grid */
+  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+
+  /* Smooth fade-in */
+  animation: fadeIn 0.5s ease forwards;
+}
+
+/* Individual cards */
 .update-card {
-  width: 100%;
-  max-width: 420px;
-  background: white;
-  border-radius: 10px;
-  border: 1px solid black;
-  margin: 0 auto;
-  margin-top: 2%;
-  padding: .85rem 1rem;
+  background: #ffffffcc;
+  box-shadow: 0 14px 40px rgba(0, 0, 0, 0.08),
+              0 0 0 6px rgba(255,255,255,0.7);
+  border: 1px solid rgba(255, 255, 255, 0.55);
+  border-radius: 1.25rem;
+
+  padding: 1.4rem 1.2rem;
+  backdrop-filter: blur(10px);
+
+  transition: 
+    transform 0.2s ease,
+    box-shadow 0.25s ease,
+    border-color 0.25s ease;
+
+  cursor: pointer;
 }
 
+/* Hover */
+.update-card:hover {
+  transform: translateY(-4px);
+  border: 1px solid rgba(255, 255, 255, 0.55);
+  box-shadow: 0 14px 40px rgba(0, 0, 0, 0.08),
+              0 0 0 6px rgba(255,255,255,0.7);
+}
+
+/* Title */
+.update-card-title {
+  font-weight: 700;
+  font-size: 1rem;
+  margin-bottom: 0.45rem;
+  color: #111827;
+}
+
+/* Description */
 .update-card-desc {
-  font-size: .85rem;
-  color: var(--text-muted);
-  line-height: 1.4;
-  max-width: 78ch;
+  color: #6b7280;
+  line-height: 1.6;
+  font-size: 0.92rem;
+  margin-bottom: 0.9rem;
 }
 
+/* Date */
 .update-card-date {
-  display: flex;
-  justify-content: end;
+  font-size: 0.8rem;
+  color: #9ca3af;
 }
 
-@media (min-width: 360px) {
-  .update-card {
-    max-width: 220px;
+/* Fade in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
-@media (min-width: 344px) {
+/* Mobile tweaks */
+@media (max-width: 500px) {
+  .changelog-card-display {
+    gap: 1rem;
+  }
   .update-card {
-    max-width: 200px;
+    padding: 1.1rem;
+  }
+  .update-card-title {
+    font-size: 0.95rem;
   }
 }

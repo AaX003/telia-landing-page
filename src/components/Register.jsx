@@ -11,8 +11,18 @@ function Register() {
                 </header>
 
                 <label 
+                    htmlFor="name" 
+                    className="name-label">Enter Name</label>
+                    <input
+                        id="name"
+                        type="name"
+                        placeholder="Create a Name"
+                        required
+                    />
+
+                <label 
                     htmlFor="email" 
-                    className="email-label">Email</label>
+                    className="email-label">Create Email</label>
                     <input
                         id="email"
                         type="email"
@@ -22,7 +32,7 @@ function Register() {
 
                     <label 
                         htmlFor="password" 
-                        className="password-label">Password</label>
+                        className="password-label">Create Password</label>
                     <input 
                         id="password"
                         type="password"

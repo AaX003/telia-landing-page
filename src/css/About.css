@@ -170,7 +170,8 @@
     background: rgba(181, 252, 216, 0.607);
     backdrop-filter: blur(20px);
     transform: rotate(-3deg);
-} .stats__about .stat__about:nth-child(3):hover {
+} .stats__about .stat__about:nth-child(3):hover,
+.stats__about .stat__about:nth-child(4):hover {
     opacity: 0.2;
 }
 

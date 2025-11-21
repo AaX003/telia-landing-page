@@ -1,3 +1,4 @@
+import { Link } from "react-router";
 import "../css/Testimonials.css";
 
 // ICONS + IMAGES
@@ -99,13 +100,8 @@ function Testimonials() {
                     <img src={userThree} alt="" className="user-img" />
                     <img src={userFour} alt="" className="user-img" />
                 </div>
-                    <p className="user-count">
-                        <a 
-                            href="swijidj"
-                            className="link"
-                        >
-                            View More
-                        </a>
+                    <p className="view-more-btn-wrapper">
+                        <Link to="/*" className="link">View More</Link>
                     </p>
                 </div>
             </div>

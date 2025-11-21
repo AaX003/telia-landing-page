@@ -49,9 +49,6 @@ function Changelog() {
             date: "Dec 20th, 2024",
         }
     ];
-
-    const total = updates.length;
-    const { title, desc, date } = updates[index];
     
     return (
         <section className="changelog-section">
@@ -64,22 +61,28 @@ function Changelog() {
                 </p>
             </header>
             {/* TODO */}
-            <button className="view-btn" onClick={showUpdates === false ? () => setShowUpdates(true) : () => setIndex((i) => (i + 1) % total)}>
+            <button 
+            className="view-btn" 
+            onClick={showUpdates === false ? () => setShowUpdates(true) : () => setShowUpdates(false)}>
                 { 
-               showUpdates === false ? "View Changelog" : "Next Update"
+                    showUpdates === false ? "View Changelog" : "Close Changelog" 
                 }
             </button>
-            
-            {showUpdates === true && (
-                <section className="changelog-card-display">
-                    <article className="update-card">
-                        <h4 className="update-card-title">{title}</h4>
-                        <p className="update-card-desc">{desc}</p>
-                        <small className="update-card-date">{date}</small>
+
+
+        {showUpdates === true && (
+            <section className="changelog-card-display">
+                {updates.map((u, idx) => (
+                    <article key={idx} className="update-card">
+                        <h4 className="update-card-title">{u.title}</h4>
+                        <p className="update-card-desc">{u.desc}</p>
+                        <small className="update-card-date">{u.date}</small>
                     </article>
-                   
-                </section>
+                ))} 
+             </section>
             )}
+            
+        
         </section>
     );
 }

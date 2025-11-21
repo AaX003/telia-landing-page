@@ -29,13 +29,19 @@ function Login() {
                 required
                 minLength={8}
             />
+            <span className="forgot-pass-link-wrapper">
+              <p className="pass-msg">
+               Forgot your password? Reset <Link to="/forgotpass" className="link">here</Link>
+              </p>
+            </span>
+            <button className="submit-btn" type="submit">Log In</button>
             <span className="link-wrapper">
               <p className="msg">
                 Need an account? <Link to="/register" className="link">Register</Link> here
               </p>
             </span>
-            <button className="submit-btn" type="submit">Log In</button>
             <Link to="/" className="back-to-home-btn">Back</Link>
+            
         </form>
       </section>
     </section>
